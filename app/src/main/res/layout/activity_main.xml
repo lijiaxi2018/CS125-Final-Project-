@@ -8,9 +8,17 @@
 
     <Button
         android:id="@+id/startbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Let's start!"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="230dp" />
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <TextView
+        android:id="@+id/Quiz View"
+        android:layout_width="134dp"
+        android:layout_height="78dp"
+        android:text="QUIZ"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="64dp" />
 </android.support.constraint.ConstraintLayout>
