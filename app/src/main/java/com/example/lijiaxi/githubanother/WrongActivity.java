@@ -6,22 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class WrongActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_wrong);
 
-        start();
+        returntofirstPage();
     }
 
-    private void start() {
-        Button restartButton = (Button) findViewById(R.id.startbutton);
+    private void returntofirstPage() {
+        Button restartButton = (Button) findViewById(R.id.returntofirstpagebutton);
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PageActivity.class));
+                startActivity(new Intent(WrongActivity.this, MainActivity.class));
             }
         });
     }

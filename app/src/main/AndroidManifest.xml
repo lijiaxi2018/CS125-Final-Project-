@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PageActivity" />
+        <activity android:name=".WrongActivity" />
+        <activity android:name=".FinalActivity"></activity>
     </application>
 
 </manifest>
