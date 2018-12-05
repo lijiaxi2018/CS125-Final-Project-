@@ -36,7 +36,7 @@
             tools:layout_editor_absoluteY="231dp" />
 
         <Button
-            android:id="@+id/answer2"
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Answer 2"
@@ -44,7 +44,7 @@
             tools:layout_editor_absoluteY="231dp" />
 
         <Button
-            android:id="@+id/answer3"
+            android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Answer 3"
@@ -52,7 +52,7 @@
             tools:layout_editor_absoluteY="231dp" />
 
         <Button
-            android:id="@+id/answer4"
+            android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Answer 4"
@@ -60,7 +60,7 @@
             tools:layout_editor_absoluteY="231dp" />
 
         <Button
-            android:id="@+id/back"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Back"

@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PageActivity extends AppCompatActivity {
+public class Page7Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_page);
+        setContentView(R.layout.activity_page7);
 
         right();
         wrong1();
@@ -19,12 +19,13 @@ public class PageActivity extends AppCompatActivity {
         wrong3();
         back();
     }
+
     private void right() {
         Button restartButton = (Button) findViewById(R.id.answer1);
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PageActivity.this, Page2Activity.class));
+                startActivity(new Intent(Page7Activity.this, Page8Activity.class));
             }
         });
     }
@@ -34,7 +35,7 @@ public class PageActivity extends AppCompatActivity {
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PageActivity.this, FinalActivity.class));
+                startActivity(new Intent(Page7Activity.this, FinalActivity.class));
             }
         });
     }
@@ -44,7 +45,7 @@ public class PageActivity extends AppCompatActivity {
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PageActivity.this, FinalActivity.class));
+                startActivity(new Intent(Page7Activity.this, FinalActivity.class));
             }
         });
     }
@@ -54,7 +55,7 @@ public class PageActivity extends AppCompatActivity {
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PageActivity.this, FinalActivity.class));
+                startActivity(new Intent(Page7Activity.this, FinalActivity.class));
             }
         });
     }
@@ -64,10 +65,8 @@ public class PageActivity extends AppCompatActivity {
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PageActivity.this, MainActivity.class));
+                startActivity(new Intent(Page7Activity.this, MainActivity.class));
             }
         });
     }
-
-
 }
