@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +20,16 @@
         </activity>
         <activity android:name=".PageActivity" />
         <activity android:name=".WrongActivity" />
-        <activity android:name=".FinalActivity"></activity>
+        <activity android:name=".FinalActivity" />
+        <activity android:name=".Page2Activity" />
+        <activity android:name=".Page3Activity" />
+        <activity android:name=".Page4Activity" />
+        <activity android:name=".Page5Activity" />
+        <activity android:name=".Page6Activity" />
+        <activity android:name=".Page7Activity" />
+        <activity android:name=".Page8Activity" />
+        <activity android:name=".Page9Activity" />
+        <activity android:name=".Page10Activity"></activity>
     </application>
 
 </manifest>
