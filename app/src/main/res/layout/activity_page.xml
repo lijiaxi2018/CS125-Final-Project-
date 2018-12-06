@@ -7,31 +7,37 @@
     tools:context=".PageActivity">
 
     <LinearLayout
-        android:id="@+id/back"
-        android:layout_width="0dp"
+        android:id="@+id/page_layout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/questionView"
             android:layout_width="380dp"
             android:layout_height="171dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="question:"
+            android:text="@string/question"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/answer1"
-            android:layout_width="match_parent"
+            android:layout_width="412dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="Answer 1"
+            android:text="@string/answer_1"
             app:layout_constraintEnd_toStartOf="@+id/button2"
             tools:layout_editor_absoluteY="231dp" />
 
@@ -39,15 +45,15 @@
             android:id="@+id/answer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Answer 2"
+            android:text="@string/answer_2"
             tools:layout_editor_absoluteX="105dp"
             tools:layout_editor_absoluteY="231dp" />
 
         <Button
-            android:id="@+id/answer3"
+            android:id="@+id/answer_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Answer 3"
+            android:text="@string/answer_3"
             tools:layout_editor_absoluteX="198dp"
             tools:layout_editor_absoluteY="231dp" />
 
@@ -55,7 +61,7 @@
             android:id="@+id/answer4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Answer 4"
+            android:text="@string/answer_4"
             tools:layout_editor_absoluteX="291dp"
             tools:layout_editor_absoluteY="231dp" />
 
@@ -63,7 +69,7 @@
             android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="@string/back"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="363dp" />
 
