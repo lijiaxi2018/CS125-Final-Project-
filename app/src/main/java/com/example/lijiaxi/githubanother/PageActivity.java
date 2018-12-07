@@ -6,21 +6,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PageActivity extends AppCompatActivity {
 
 
-    private QuestionLiarbry myQuestions = new QuestionLiarbry();
+    public QuestionLiarbry myQuestions = new QuestionLiarbry();
 
     private TextView mQuestionView;
     private Button mChoice1;
     private Button mChoice2;
     private Button mChoice3;
     private Button mChoice4;
+    private Button back;
 
     private String mAnswer;
-    private int score = 0;
-    private int questionNumber = 0;
+    public int score = 0;
+    public int questionNumber = 0;
 
 
     @Override
@@ -33,21 +35,19 @@ public class PageActivity extends AppCompatActivity {
         mChoice2 = (Button)findViewById(R.id.answer2);
         mChoice3 = (Button)findViewById(R.id.answer_3);
         mChoice4 = (Button)findViewById(R.id.answer4);
+        back = (Button)findViewById(R.id.back);
+
         updateQuestion();
-        back();
-
-
-        if (questionNumber == 2) {
-            startActivity(new Intent(PageActivity.this, FinalActivity.class));
-        }
 
         mChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mChoice1.getText() == mAnswer) {
                     score++;
+                    Toast.makeText(PageActivity.this, "Correct", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 } else {
+                    Toast.makeText(PageActivity.this, "Wrong", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 }
             }
@@ -58,8 +58,10 @@ public class PageActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mChoice2.getText() == mAnswer) {
                     score++;
+                    Toast.makeText(PageActivity.this, "Correct", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 } else {
+                    Toast.makeText(PageActivity.this, "Wrong", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 }
             }
@@ -70,8 +72,10 @@ public class PageActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mChoice3.getText() == mAnswer) {
                     score++;
+                    Toast.makeText(PageActivity.this, "Correct", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 } else {
+                    Toast.makeText(PageActivity.this, "Wrong", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 }
             }
@@ -82,16 +86,28 @@ public class PageActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mChoice4.getText() == mAnswer) {
                     score++;
+                    Toast.makeText(PageActivity.this, "Correct", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 } else {
+                    Toast.makeText(PageActivity.this, "Wrong", Toast.LENGTH_LONG).show();
                     updateQuestion();
                 }
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PageActivity.this, MainActivity.class));
             }
         });
 
     }
 
     private void updateQuestion() {
+        if (questionNumber == 3) {
+            startActivity(new Intent(PageActivity.this, AnotherActivity.class));
+        }
         mQuestionView.setText(myQuestions.getQuestion(questionNumber));
         mChoice1.setText(myQuestions.getChoice1(questionNumber));
         mChoice2.setText(myQuestions.getChoice2(questionNumber));
@@ -101,16 +117,4 @@ public class PageActivity extends AppCompatActivity {
 
         questionNumber++;
     }
-
-    private void back() {
-        Button restartButton = (Button) findViewById(R.id.back);
-        restartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PageActivity.this, MainActivity.class));
-            }
-        });
-    }
-
-
 }
