@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">GitHubAnother</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="let_s_start">Let\'s start!</string>
+    <string name="question">question:</string>
+    <string name="answer_1">Answer 1</string>
+    <string name="answer_2">Answer 2</string>
+    <string name="answer_3">Answer 3</string>
+    <string name="answer_4">Answer 4</string>
+    <string name="back">Back</string>
+    <string name="title_activity_another">AnotherActivity</string>
 </resources>
