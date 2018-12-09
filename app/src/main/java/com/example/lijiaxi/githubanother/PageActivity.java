@@ -14,6 +14,8 @@ public class PageActivity extends AppCompatActivity {
     public QuestionLiarbry myQuestions = new QuestionLiarbry();
 
     private TextView mQuestionView;
+    protected TextView mScore;
+
     private Button mChoice1;
     private Button mChoice2;
     private Button mChoice3;
@@ -21,7 +23,8 @@ public class PageActivity extends AppCompatActivity {
     private Button back;
 
     private String mAnswer;
-    public int score = 0;
+    protected int score = 0;
+    protected int finalscore;
     public int questionNumber = 0;
 
 
@@ -30,7 +33,8 @@ public class PageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page);
 
-        mQuestionView = (TextView)findViewById(R.id.questionView) ;
+        mQuestionView = (TextView)findViewById(R.id.questionView);
+        mScore = (TextView) findViewById(R.id.scoreView);
         mChoice1 = (Button)findViewById(R.id.answer1);
         mChoice2 = (Button)findViewById(R.id.answer2);
         mChoice3 = (Button)findViewById(R.id.answer_3);
@@ -106,8 +110,9 @@ public class PageActivity extends AppCompatActivity {
 
     private void updateQuestion() {
         if (questionNumber == 3) {
-            startActivity(new Intent(PageActivity.this, AnotherActivity.class));
+            startActivity(new Intent(PageActivity.this, FinalPageActivity.class));
         }
+        mScore.setText("score: " + score);
         mQuestionView.setText(myQuestions.getQuestion(questionNumber));
         mChoice1.setText(myQuestions.getChoice1(questionNumber));
         mChoice2.setText(myQuestions.getChoice2(questionNumber));
