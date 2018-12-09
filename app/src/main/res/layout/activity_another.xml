@@ -4,21 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FinalActivity">
 
     <LinearLayout
+        android:id="@+id/final_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="YOU FINAL SCORE IS" />
+
+        <TextView
+            android:id="@+id/score_view"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:text="Score" />
+
         <Button
-            android:id="@+id/startbutton"
+            android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="@string/let_s_start"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="0dp" />
+            android:text="Back" />
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>
