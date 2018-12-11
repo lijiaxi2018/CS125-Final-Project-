@@ -46,14 +46,11 @@ public class PageActivity extends AppCompatActivity {
         mChoice3 = (Button)findViewById(R.id.answer_3);
         mChoice4 = (Button)findViewById(R.id.answer4);
         back = (Button)findViewById(R.id.back);
-        scoreButton = (Button)findViewById(R.id.button_score);
 
         correctMusic = MediaPlayer.create(this, R.raw.correct);
         wrongMusic = MediaPlayer.create(this, R.raw.wrong);
 
         updateQuestion();
-
-
 
         mChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,18 +123,11 @@ public class PageActivity extends AppCompatActivity {
             }
         });
 
-        scoreButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PageActivity.this, FinalPageActivity.class);
-                intent.putExtra("score", score);
-                startActivity(intent);
-            }
-        });
+
     }
 
     private void updateQuestion() {
-        mScore.setText("score: " + score);
+        mScore.setText("Question  " + questionNumber + "  " +"score: " + score);
         mQuestionView.setText(myQuestions.getQuestion(questionNumber));
         mChoice1.setText(myQuestions.getChoice1(questionNumber));
         mChoice2.setText(myQuestions.getChoice2(questionNumber));
