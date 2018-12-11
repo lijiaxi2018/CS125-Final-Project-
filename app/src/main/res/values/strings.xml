@@ -9,4 +9,6 @@
     <string name="answer_4">Answer 4</string>
     <string name="back">Back</string>
     <string name="title_activity_another">AnotherActivity</string>
+    <string name="score">Score</string>
+    <string name="answer_">answer 1</string>
 </resources>
