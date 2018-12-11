@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/questionView"
-            android:layout_width="380dp"
+            android:layout_width="387dp"
             android:layout_height="171dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -78,6 +78,14 @@
             android:text="@string/back"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="363dp" />
+
+        <Button
+            android:id="@+id/button_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="451dp" />
 
     </LinearLayout>
 

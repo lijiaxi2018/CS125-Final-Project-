@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FinalPageActivity extends PageActivity {
 
@@ -17,11 +18,15 @@ public class FinalPageActivity extends PageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_page);
 
-        update();
-        home();
-    }
-    private void home() {
+        Intent intent = getIntent();
+        int finalScore = intent.getIntExtra("score", 0);
+        mScore = (TextView) findViewById(R.id.scoreView);
+
+        //Toast.makeText(FinalPageActivity.this, finalscore, Toast.LENGTH_LONG).show();
+        //mScore.setText(finalScore);
+
         Button restartButton = (Button) findViewById(R.id.returnbutton);
+
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,10 +34,5 @@ public class FinalPageActivity extends PageActivity {
             }
         });
     }
-    private void update() {
-        mScore = (TextView) findViewById(R.id.scoreView);
-        mScore.setText(" CONGRATULATIONS! your score is " + score);
-    }
-
 
 }

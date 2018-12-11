@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".PageActivity" />
-        <activity android:name=".WrongActivity" />
         <activity android:name=".FinalPageActivity"></activity>
     </application>
 
