@@ -18,8 +18,6 @@ public class FinalPageActivity extends PageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_page);
 
-        Intent intent = getIntent();
-        int finalScore = intent.getIntExtra("score", 0);
         mScore = (TextView) findViewById(R.id.scoreView);
 
         //Toast.makeText(FinalPageActivity.this, finalscore, Toast.LENGTH_LONG).show();
