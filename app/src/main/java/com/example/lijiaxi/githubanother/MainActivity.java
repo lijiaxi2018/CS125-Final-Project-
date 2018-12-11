@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public static Question[] questions;
     private TextView mScore;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

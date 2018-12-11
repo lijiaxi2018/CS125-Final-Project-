@@ -34,21 +34,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+  
+        <TextView
+            android:id="@+id/questionView"
+            android:layout_width="387dp"
+            android:layout_height="171dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/question"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/answer1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="247dp"
-        android:shadowColor="@color/colorPrimary"
-        android:text="Answer 1"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteY="231dp" />
+        <Button
+            android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="answer 1"
+            tools:layout_editor_absoluteY="231dp" />
+
 
     <Button
         android:id="@+id/answer2"
@@ -96,6 +105,16 @@
         android:textSize="30sp"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="363dp" />
+
+    <Button
+            android:id="@+id/button_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="451dp" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
