@@ -51,7 +51,7 @@ public class PageActivity extends AppCompatActivity {
         wrongMusic = MediaPlayer.create(this, R.raw.wrong);
 
         updateQuestion();
-        
+
         mChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
