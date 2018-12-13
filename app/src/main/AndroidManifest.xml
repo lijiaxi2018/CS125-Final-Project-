@@ -19,11 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PageActivity" />
-        <activity android:name=".WrongActivity" />
-        <activity
-            android:name=".AnotherActivity"
-            android:label="@string/title_activity_another"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".FinalPageActivity"></activity>
     </application>
 
 </manifest>

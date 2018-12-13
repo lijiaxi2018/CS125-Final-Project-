@@ -1,10 +1,12 @@
 package com.example.lijiaxi.githubanother;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "cs125finalproject";
     private static RequestQueue requestQueue;
     public static Question[] questions;
+    private TextView mScore;
 
 
     @Override
@@ -34,12 +37,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         requestQueue = Volley.newRequestQueue(this);
 
-
-
-
-
+        gotoPage();
 
     }
+
+    private void update() {
+        mScore = (TextView) findViewById(R.id.scoreView);
+        mScore.setText("your scores:  " );
+    }
+
+
+    private void gotoPage() {
+        Button restartButton = (Button) findViewById(R.id.startbutton);
+        restartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PageActivity.class));
+            }
+        });
+    }
+
+
 
     void startAPICall() {
         try {
