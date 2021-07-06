@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                                     questions = getQuestions(response);
                                 }
                             } catch (Exception e) {
-                                e.printStackTrace();;
+                                e.printStackTrace();
                             }
                         }
                     }, new Response.ErrorListener() {
